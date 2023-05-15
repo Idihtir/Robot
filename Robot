@@ -1,0 +1,30 @@
+<?php
+
+// Класс "Робот"
+class Robot {
+  private $name;
+  
+  public function __construct($name) {
+    $this->name = $name;
+  }
+  
+  public function sayHello() {
+    echo "Привет, я робот {$this->name}! Чем могу помочь?\n";
+  }
+  
+  public function doTask($task) {
+    echo "{$this->name}: Выполняю задачу - {$task}...\n";
+    // Здесь можно добавить код для выполнения конкретной задачи роботом
+    echo "{$this->name}: Задача выполнена!\n";
+  }
+}
+
+// Создание экземпляра объекта "Робот"
+$robot = new Robot("Робик");
+$robot->sayHello();
+
+// Выполнение задачи роботом
+$robot->doTask("Уборка комнаты");
+$robot->doTask("Приготовление пищи");
+
+?>
